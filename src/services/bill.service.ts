@@ -60,9 +60,9 @@ class billService {
     //该月的收支和
     allBill.forEach((bill: IBill) => {
       if (bill.billType === "收入") {
-        monthTotal.income += bill.money;
+        monthTotal.income += Number(bill.money);
       } else {
-        monthTotal.expense += bill.money;
+        monthTotal.expense += Number(bill.money);
       }
     });
 
